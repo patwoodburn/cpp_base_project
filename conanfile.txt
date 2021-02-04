@@ -1,0 +1,8 @@
+[requires]
+inih/52
+paho-mqtt-c/1.3.8
+paho-mqtt-cpp/1.2.0
+catch2/2.13.4
+
+[generators]
+cmake
