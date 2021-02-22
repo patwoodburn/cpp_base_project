@@ -21,3 +21,4 @@ target_link_libraries(some_test ${CONAN_LIBS})
 
 include(${CMAKE_SOURCE_DIR}/cmake/unit_test.cmake)
 include(${CMAKE_SOURCE_DIR}/cmake/cppcheck.cmake)
+include(${CMAKE_SOURCE_DIR}/cmake/clang_tools.cmake)
