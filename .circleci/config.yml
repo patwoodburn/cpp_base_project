@@ -14,6 +14,7 @@ jobs:
       - run: cmake ..
       - run: cmake --build .
       - run: make cppcheck
+      - run: make clang-tidy
       - run: mkdir ~/repo/build/test_results && mkdir ~/repo/build/test_results/unit_test
       - run: make test
       - run: cp ~/repo/build/results.xml ~/repo/build/test_results/unit_test/results.xml
