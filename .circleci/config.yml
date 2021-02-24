@@ -6,7 +6,7 @@ jobs:
     docker:
     - image: conanio/gcc7:latest
     steps:
-      - run: sudo apt update && sudo apt install clang cppcheck clang-tidy clang-format
+      - run: sudo apt update && sudo apt install -y clang cppcheck clang-tidy clang-format
       - checkout
       - run: cd build
       - run: conan install .. -s compiler.libcxx=libstdc++11 --build=missing
