@@ -4,6 +4,7 @@ if (CLANG_TIDY)
             clang-tidy
             COMMAND ${CLANG_TIDY}
             ${SOURCE_FILES}
+            -p compile_commands.json
             --
             -std=c++11
             -I ${CMAKE_SOURCE_DIR}/include
