@@ -9,7 +9,7 @@ jobs:
     steps:
       - run: sudo apt update && sudo apt install -y clang cppcheck clang-tidy clang-format
       - checkout:
-          path: ~/repo/build
+          path: ~/repo
       - run: conan install .. -s compiler.libcxx=libstdc++11 --build=missing
       - run: cmake ..
       - run: cmake build .
