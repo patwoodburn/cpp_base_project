@@ -1,3 +1,4 @@
+message(${CONAN_INCLUDE_DIRS})
 find_program(CLANG_TIDY NAMES clang-tidy clang-tidy-6.0)
 if (CLANG_TIDY)
     add_custom_target(
@@ -8,7 +9,7 @@ if (CLANG_TIDY)
             --
             -std=c++11
             -I ${CMAKE_SOURCE_DIR}/include
-            ${CONAN_LIBS}
+            -I ${CONAN_INCLUDE_DIRS}
     )
 endif ()
 
