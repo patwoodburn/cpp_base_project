@@ -7,9 +7,9 @@ jobs:
     - image: conanio/gcc7:latest
     working_directory: ~/repo/build
     steps:
-      - run: sudo apt update && sudo apt install -y clang cppcheck clang-tidy clang-format
       - checkout:
           path: ~/repo
+      - run: sudo apt update && sudo apt install -y clang cppcheck clang-tidy clang-format
       - run: conan install .. -s compiler.libcxx=libstdc++11 --build=missing
       - run: cmake ..
       - run: cmake build .
