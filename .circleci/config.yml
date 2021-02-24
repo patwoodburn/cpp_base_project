@@ -19,3 +19,5 @@ jobs:
       - run: cp ~/repo/build/results.xml ~/repo/build/test_results/unit_test/results.xml
       - store_test_results:
           path: ~/repo/build/test_results
+      - store_artifacts:
+          path: ~/repo/build/bin/cpp_base_project
