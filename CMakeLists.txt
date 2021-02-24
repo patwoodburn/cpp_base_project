@@ -4,6 +4,8 @@ project(cpp_base_project)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED)
 
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 add_compile_options(-Wall -Wextra -pedantic -Werror)
 set(CONAN_SYSTEM_INCLUDES ON)
 include(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
