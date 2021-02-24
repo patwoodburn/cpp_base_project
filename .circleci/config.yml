@@ -19,4 +19,4 @@ jobs:
       - run: ls ~/repo/build/Testing/Temporary
       - run: cat ~/repo/build/Testing/Temporary/LastTest.log
       - store_test_results:
-          path: ~/repo/build/Testing/Temporary/LastTest.log
+          path: ~/repo/build/test.xml
