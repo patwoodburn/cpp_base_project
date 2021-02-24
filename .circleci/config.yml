@@ -15,3 +15,5 @@ jobs:
       - run: cmake --build .
       - run: make cppcheck
       - run: make test
+      - store_test_results:
+          path: ~/repo/build/Testing/Temporary/LastTest.log
