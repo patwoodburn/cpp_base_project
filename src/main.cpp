@@ -43,7 +43,7 @@ int main(int argc, char *argv[]) {
   std::cout << result - s.begin();
   std::cout << std::endl;
 
-  std::array<int, 10> s3 {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+  std::array<int, 10> s3{0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
   CopySort(s.begin(), s.end(), s3.begin(), BubbleSort);
   for (const auto &n : s3) {
     std::cout << n << ' ';
