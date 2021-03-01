@@ -1,13 +1,13 @@
 message(${CONAN_INCLUDE_DIRS})
-find_program(CLANG_TIDY NAMES clang-tidy clang-tidy-6.0)
+find_program(CLANG_TIDY NAMES clang-tidy clang-tidy-5.0)
 if (CLANG_TIDY)
     add_custom_target(
-            clang-tidy
+            clang-tidy-5.0
             COMMAND ${CLANG_TIDY}
             ${SOURCE_FILES}
             -p compile_commands.json
+            -extra-arg=-std=c++17
             --
-            -std=c++11
             -I ${CMAKE_SOURCE_DIR}/include
             -I ${CONAN_INCLUDE_DIRS}
     )
