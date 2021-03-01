@@ -4,12 +4,12 @@ version: 2.1
 jobs:
   build:
     docker:
-    - image: conanio/gcc7:latest
+    - image: conanio/gcc10:latest
     working_directory: ~/repo/build
     steps:
       - checkout:
           path: ~/repo
-      - run: sudo apt update && sudo apt install -y clang cppcheck clang-tidy-5.0 clang-format
+      - run: sudo apt update && sudo apt install -y clang cppcheck clang-tidy-6.0 clang-format-6.0
       - run: conan install .. -s compiler.libcxx=libstdc++11 --build=missing
       - run: cmake ..
       - run: cmake --build .

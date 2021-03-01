@@ -17,7 +17,7 @@ class InputParser{
       InputParser& operator=(InputParser&&) = delete;
 
 
-      void add_values(int &argc, char **argv) {
+      void add_values(const int &argc, char **argv) {
          for(int i = 1; i < argc; ++i) {
             this->tokens.push_back(std::string_view(argv[i]));
          }

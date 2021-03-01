@@ -1,8 +1,8 @@
 message(${CONAN_INCLUDE_DIRS})
-find_program(CLANG_TIDY NAMES clang-tidy clang-tidy-5.0)
+find_program(CLANG_TIDY NAMES clang-tidy clang-tidy-6.0)
 if (CLANG_TIDY)
     add_custom_target(
-            clang-tidy-5.0
+            clang-tidy
             COMMAND ${CLANG_TIDY}
             ${SOURCE_FILES}
             -p compile_commands.json

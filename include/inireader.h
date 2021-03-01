@@ -55,7 +55,7 @@ class INIReader {
 INIReader& getApplicationConfig() {
     static INIReader config = INIReader(
         InputParser::getInstance().cmdOptionExists("-f") ?
-        std::string{InputParser::getInstance().getCmdOption("-f")} :
+        std::string(InputParser::getInstance().getCmdOption("-f")) :
         "/etec/cpp_base_project/config"
     );
     return config;
