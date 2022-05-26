@@ -1,6 +1,0 @@
-[requires]
-inih/52
-catch2/2.13.4
-
-[generators]
-cmake
